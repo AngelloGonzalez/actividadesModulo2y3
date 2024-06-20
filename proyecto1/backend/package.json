@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Primer proyecto MEAN stack",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  
+  "author": "Angelo Gonzalez",
+  "license": "ISC"
+}
