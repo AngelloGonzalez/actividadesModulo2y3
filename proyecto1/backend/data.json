@@ -1,0 +1,37 @@
+[
+    {
+        "nombre": "Kia Picanto",
+        "imagen": "https://th.bing.com/th/id/OIP.NMocO7XsHiecGODzOmd18AAAAA?rs=1&pid=ImgDetMain",
+        "precio": "55000000",
+        "cantidad":"15",
+        "colores": "rojo, negro, verde militar"
+    },
+    {
+        "nombre": "Kia Soluto",
+        "imagen": "https://th.bing.com/th/id/OIP.-vCQkJ4xAsAAw6ERm2MthwAAAA?rs=1&pid=ImgDetMain",
+        "precio": "65000000",
+        "cantidad":"9",
+        "colores": "rojo, blanco, negro, azul, plata"
+    },
+    {
+        "nombre": "Kia Stonic",
+        "imagen": "https://th.bing.com/th/id/OIP.z92zKq5vZ3jO8yJwqgqzuAAAAA?rs=1&pid=ImgDetMain",
+        "precio": "95000000",
+        "cantidad":"20",
+        "colores": "rojo, blanco, negro, azul, plata, gris, azul oscuro"
+    },
+    {
+        "nombre": "Kia Seltos",
+        "imagen": "https://th.bing.com/th/id/OIP.3gilYkhmF7pLX6_ZICFHaQAAAA?rs=1&pid=ImgDetMain",
+        "precio": "120000000",
+        "cantidad":"18",
+        "colores": "naranja, gris, negro, plata, azul oscuro"
+    },
+    {
+        "nombre": "Kia Sportage",
+        "imagen": "https://th.bing.com/th/id/OIP.xY4nhZs20-NFa3nU3bj9oAHaFj?rs=1&pid=ImgDetMain",
+        "precio": "210000000",
+        "cantidad":"25",
+        "colores": "blanco, negro, verde militar, gris"
+    }
+]
