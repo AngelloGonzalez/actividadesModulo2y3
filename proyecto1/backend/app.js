@@ -16,9 +16,9 @@ const port = process.env.PORT;
 conectionMongo();
 
 // Prueba 
-app.get('/', (req, res) => {
-    res.send('HOLA, ESTO ES UNA PETICIÓN A MI SERVIDOR');
-});
+// app.get('/', (req, res) => {
+//     res.send('HOLA, ESTO ES UNA PETICIÓN A MI SERVIDOR');
+// });
 
 
 //3. escuchar nuestro servidor (ejecutarlo)
