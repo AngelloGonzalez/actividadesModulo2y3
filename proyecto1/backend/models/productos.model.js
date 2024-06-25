@@ -1,11 +1,11 @@
-// improtar mongoose -> schema -> plantilla de productos
+//importamos mongoose -> Schema -> plantilla de los productos
+import mongoose from 'mongoose';
 
-import mongoose, { Schema } from "mongoose";
+const schema = mongoose.Schema;
 
-const schema = mongoose.schema;
-
-// Estructurando como se van a guardar la informacion de los productos en nuestra db
-const productschema = new schema ({
+//Estructrando cómo se van a guardar la información de los productos en nuestra db
+//Schema es la plantilla
+const productSchema = new schema({
     nombre:{
         type: String,
         require:true
@@ -16,21 +16,12 @@ const productschema = new schema ({
     precio:{
         type: Number,
         require:true
-    },
-    cantidad:{
-        type: Number,
-        require:true
-    },
-    color:{
-        type: String,
-        require:true
     }
 });
 
-// utilizamos esa platilla para crear nuestro modelo ->
-// mongoose.model() -> se utiliza para crear nuestro modelo
-
-// 1. nombre de la conexion que me va a guardar datos
-// 2. necesitamos darle como parametro el schema que hicimos
-export const productModel = mongoose.model('usuario', productschema);
+//Utilizamos esa plantilla para cear nuestro modelo -> creamos la coleccion donde se van a guardar los datos
+//mongoose.model() -> crear nuestro modelo 
+//1. nombre de la coleccion que me va a guartar los datos
+//2. necesitamos darle como parámetro el schema que hicimos
+export const productModel = mongoose.model('usuario', productSchema);
 

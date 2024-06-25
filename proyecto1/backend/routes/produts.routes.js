@@ -1,28 +1,27 @@
-// importaciones 
-import express from 'express'
-// importamos nuestros controladores
-import { getProducts, postProducts, deleteproductsById, putProductsById } from "../controllers/products.controllers.js";
+//Importaciones
+import express from 'express';
+//importamos nuestros controladores
+import { getProducts, postProduct, deleteProductById, putProductById } from '../controllers/products.controllers.js';
 
-// configuramos el router de express
+
+//configuramos el Router de express
 const productsRouter = express.Router();
 
 
-// definimos nuestras rutas
+//Definimos nuestras rutas
 
-// ruta para la peticion GET
-// 1. Determino la ruta y luego le digo que es lo que tiene que hacer
+//Ruta para la petición GET
+//primero, determino la ruta, y luego le digo qué es lo que tiene que hacer
 productsRouter.get('/obtenerProductos',getProducts);
 
-// Ruta para la peticion POST
-productsRouter.post('/registrarProducto',postProducts);
+//Ruta para la petición POST
+productsRouter.post('/registrarProducto', postProduct);
 
-// Ruta para la petición DELETE
-productsRouter.delete('/eliminarProducto/:_id',deleteproductsById);
+//Ruta para la petición DELETE
+productsRouter.delete('/eliminarProducto/:_id', deleteProductById);
 
-// ruta para la petición PUT
+//Ruta para la petición PUT
+productsRouter.put('/actualizarProducto/:_id', putProductById);
 
-productsRouter.put('/actualizarProducto/:_id',putProductsById);
-
+//Exportamos rutas
 export default productsRouter;
-
-

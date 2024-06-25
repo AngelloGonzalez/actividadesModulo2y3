@@ -1,17 +1,17 @@
-// 1. importar las dependencias necesarias
-import mongoose from "mongoose";
+//1. importar las dependencias necesarias
+import mongoose from 'mongoose'
 
-// coenxion base de datos de atlas
-const conectionMongo = async ( ) => {
+const connectionMongo = async () => {
+
+    //conexion base de datos
     await mongoose.connect(process.env.CONEXION_DB,{})
-    // control de errores -> try - catch
+    //manejo de errores -> bloque try -catch
     try{
-        console.log('conexion exitosa con la base de datos');
-    }catch(errores){
-        console.error('Error de conexión: ' , error.message)
+        console.log('Conexión Exitosa con la base de datos');
+    }catch(error){
+        console.error('Error de conexión: ', error.message)
     }
-
+   
 }
 
-export default conectionMongo;
-
+export default connectionMongo;
