@@ -1,5 +1,5 @@
 //importamos mongoose -> Schema -> plantilla de los productos
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const schema = mongoose.Schema;
 
@@ -16,7 +16,15 @@ const productSchema = new schema({
     precio:{
         type: Number,
         require:true
-    }
+    },
+    cantidad:{
+        type: Number,
+        require:true
+    },
+    colores:{
+        type: String,
+        require:true
+    },
 });
 
 //Utilizamos esa plantilla para cear nuestro modelo -> creamos la coleccion donde se van a guardar los datos

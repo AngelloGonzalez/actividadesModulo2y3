@@ -1,5 +1,5 @@
 //1. Importamos los modulos o dependencias que necesitamos
-import { productModel } from '../models/products.model.js';
+import { productModel } from "../models/productos.model.js";
 
 
 //Prueba inicial de mis controladores
@@ -58,7 +58,7 @@ export const deleteProductById = async (req, res) => {
         let productDeleted = await productModel.findByIdAndDelete(idForDelete);
 
         //validación cuando no encontramos el producto solicitado
-        if (!productDeleted) {
+        if (productDeleted) {
             return res.status(404).json({ message: 'Lo siento! no se encontró producto para borrar' });
         }
 

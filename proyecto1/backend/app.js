@@ -3,7 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 //Variables de entorno -> nos guardan informacion delicada
 import connectionMongo from './config/db.js';
-import productsRouter from './routes/products.routes.js';
+import productsRouter from './routes/produts.routes.js';
 
 
 //2.Configurar el uso de nuestro servidor y de nuestras variables de
