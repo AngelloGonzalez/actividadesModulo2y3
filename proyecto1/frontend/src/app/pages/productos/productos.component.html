@@ -1,0 +1,92 @@
+<app-navegacion></app-navegacion>
+
+<main>
+  <h1>Conoce nuestros productos</h1>
+
+  <div class="container-productos row">
+    @for (productos of allProducts; track $index) {
+    <div class="card">
+      <img src="{{ productos.imagen }}" class="card-img-top" alt="..." />
+
+      <div class="card-body">
+        <h4 class="card-title">{{ productos.nombre }}</h4>
+        <p class="card-text">
+          El Kia Picanto fue diseñado pensando en maximizar el espacio para toda
+          la familia.
+        </p>
+      </div>
+      <div class="cont-colors">
+        <p>Colores Disponibles:</p>
+        <button
+          type="button"
+          class="btn btn-secondary color-btnR"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Rojo"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-secondary color-btnA"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Azul"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-secondary color-btnV"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Verde Militar"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-secondary color-btnP"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Plata"
+        ></button>
+        <button
+          type="button"
+          class="btn btn-secondary color-btnB"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Blanco"
+        ></button>
+      </div>
+      <div class="cont-compra">
+        <div class="p-precio">
+          <p>
+            Desde <br />
+            <span class="precio-span">{{ productos.precio }}</span>
+          </p>
+        </div>
+        <div>
+          <a href="#" class="btn btn-fondo">Comprar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card inf-load" aria-hidden="true">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-8"></span>
+        </p>
+        <a
+          class="btn btn-primary disabled placeholder col-6"
+          aria-disabled="true"
+        ></a>
+      </div>
+    </div>
+    }
+  </div>
+</main>
+
+<app-footer></app-footer>

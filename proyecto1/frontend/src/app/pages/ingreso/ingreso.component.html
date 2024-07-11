@@ -1,0 +1,30 @@
+
+
+<app-navegacion></app-navegacion>
+
+<main>
+<h1>Ingrese sus datos para iniciar sesión</h1>
+
+<form class="cont-dat">
+    <div class="mb-3 ">
+      <label for="exampleInputEmail1" class="form-label">Correo electronico <span class="span">*</span> </label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="correo" [(ngModel)]="correo"/>
+      <div id="emailHelp" class="form-text">Por favor ingrese su correo registrado</div>
+    </div>
+    <div class="mb-3 ">
+      <label for="exampleInputPassword1" class="form-label contra">Contraseña <span class="span">*</span></label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="contrasenia" [(ngModel)]="contrasenia"/>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Guardar mis datos de inicio de sesión</label>
+      
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Acepto <a href="#"><span class="term-cond">terminos</span> </a> y <a href="#"><span  class="term-cond">condiciones</span></a></label>
+    </div>
+    <button type="submit" class="btn btn-color" (click)="iniciarSesion()">Iniciar sesión</button>
+  </form>
+</main>
+<app-footer></app-footer>

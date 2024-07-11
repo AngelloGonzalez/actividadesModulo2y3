@@ -1,0 +1,62 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    margin: 3% 0%;
+    text-align: center;
+    font-size: 45px;
+}
+
+.cont-dat{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    font-size: 20px;
+    border: solid gray 1px;
+    border-radius: 40px;
+    padding: 3% 6%;
+}
+
+.btn-color{
+    background-color: black;
+    color: aliceblue;
+    font-size: 20px;
+    padding: 2% 30%;
+    margin-top: 4%;
+    margin-left: 11%;
+}
+
+
+              
+
+
+
+.span{
+    color: brown;
+}
+
+.contra{
+    margin-top: 4%;
+}
+
+.term-cond{
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.form-check a{
+    text-decoration: none;
+    color: black;
+}
+
+.form-check{
+    font-size: 18px;
+}

@@ -1,0 +1,39 @@
+footer{
+    background-color: black;
+    justify-content: space-around;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+
+.kia-h3{
+    text-align: center;
+    font-size: 60px;
+    font-style:oblique;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+ul a{
+    text-decoration: none;
+    font-style: none;
+}
+
+ul a li{
+    padding-top: 2%;
+    list-style: none;
+    color: aliceblue;
+}
+
+h4{
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+.des-kia{
+    padding-left: 16%;
+}
