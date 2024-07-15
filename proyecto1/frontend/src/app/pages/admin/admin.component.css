@@ -11,12 +11,17 @@ main{
     height: 70vh;
 }
 
-.table{
+section{
+    height: auto;
     width: 70%;
-    text-align: center;
     margin-left: 15%;
+}
+
+.table{
+    width: 100%;
     border:  gray solid 1px;
     border-radius: 15px;
+    text-align: center;
 }
 
 .tr-title{
@@ -37,7 +42,21 @@ main{
 }
 
 .Agg{
-    background: rgb(174, 174, 174);
+    background: darkgrey;
     border-radius: 10PX;
     padding: 5PX;
+}
+
+.con-mod{
+    width: 60vw;
+    padding: 3%;
+}
+
+.mod-cont{
+    margin-left: 20%;
+}
+
+.neg-title{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

@@ -4,11 +4,11 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { IngresoComponent } from './pages/ingreso/ingreso.component';
 
-
 export const routes: Routes = [
     {path: 'inicio', component: InicioComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'productos', component: ProductosComponent},
     {path: 'ingreso', component: IngresoComponent},
+    {path: ':allProducts/:id/:action', component: AdminComponent},
     {path: '**', redirectTo: '/inicio', pathMatch: 'full'}
 ];

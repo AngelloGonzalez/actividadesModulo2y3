@@ -1,12 +1,13 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input, input } from '@angular/core';
 import { FooterComponent } from '../../comant/footer/footer.component';
 import { NavegacionComponent } from '../../comant/navegacion/navegacion.component';
 import { ProductsService } from '../../services/products.service';
+import { AdminComponent } from '../admin/admin.component';
 
 @Component({
   selector: 'app-productos',
   standalone: true,
-  imports: [FooterComponent, NavegacionComponent],
+  imports: [FooterComponent, NavegacionComponent, AdminComponent],
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })
@@ -33,5 +34,13 @@ export class ProductosComponent {
     this.obtenerProductos();
     
   }
+
+  deleteProducto(id: string){
+    this.productoService.deleteProduct(id).subscribe(()=>{
+
+    });
+}
+
+  
 
 }

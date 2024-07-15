@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductsService {
-
+  
   constructor() { }
 
   httpClient = inject(HttpClient);
@@ -50,7 +50,6 @@ export class ProductsService {
     }
 
     return this.httpClient.put(`${this.API_URL_PUT}/${id}`, infoProducto);
-
   }
 
   //Eliminar datos
