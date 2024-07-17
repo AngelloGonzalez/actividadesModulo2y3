@@ -14,11 +14,6 @@ const port= 6000;
 
 // 3. Escuchar nuestro servidor para poder ejecutar el app
 app.listen(port, ()=>{
-    console.log('El servidor se ejecuta correctamente');
+    console.log(`El servidor se ejecuta en ${port}`);
 });
-
-
-
-
-
 
