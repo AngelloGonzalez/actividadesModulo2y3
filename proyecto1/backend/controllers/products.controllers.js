@@ -31,13 +31,14 @@ export const getProducts = async (req, res) => {
 //Petición POST -> me crea los productos uno por uno
 export const postProduct = async (req, res) => {
     //body -> contenido de mi petición -> los datos que tu le das para que se pueda crear el producto nuevo
-    const { nombre, imagen, precio } = req.body;
-
+    const { nombre, imagen, precio, color, cantidad } = req.body;
+    // const data  = req.body
     //validación de que se hayan ingresado todos los datos
-    if (!nombre || !imagen || !precio) {
-        return res.status(400).json({ message: 'Debe ingresar todos los campos requeridos, nombre, imagen y precio' });
-    }
+    // if (nombre || imagen || precio || color || cantidad) {
+    //     return res.status(400).json({ message: 'Debe ingresar todos los campos requeridos, nombre, imagen, precio y color' });
+    // }
 
+    // console.log('ejemplo' + req.body);
     try {
         const newProduct = await productModel.create(req.body);
         //201 -> se creo correctamente
@@ -89,4 +90,8 @@ export const putProductById = async (req, res) => {
         //500 -> error inesperado en el servidor
         return res.status(500).json({ message: error.message });
     }
+
+
+
+
 }
