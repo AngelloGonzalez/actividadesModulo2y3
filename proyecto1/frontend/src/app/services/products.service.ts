@@ -12,15 +12,17 @@ export class ProductsService {
 
   httpClient = inject(HttpClient);
 
-  API_URL_GET= "http://localhost:3000/obtenerProductos";
-  API_URL_POST= "http://localhost:3000/registrarProducto";
-  API_URL_PUT= "http://localhost:3000/actualizarProducto";
-  API_URL_DELETE= "http://localhost:3000/eliminarProducto";
+  // API_URL_GET= "http://localhost:3000/obtenerProductos";
+  // API_URL_POST= "http://localhost:3000/registrarProducto";
+  // API_URL_PUT= "http://localhost:3000/actualizarProducto";
+  // API_URL_DELETE= "http://localhost:3000/eliminarProducto";
+
+  API_URL= "http://localhost:3000/";
 
   //Obtener datos
   getProducts(){
     // Hago la petición GET
-    return this.httpClient.get(this.API_URL_GET);
+    return this.httpClient.get(`${this.API_URL}obtenerProductos`);
   }
 
   //Crear datos
@@ -34,7 +36,7 @@ export class ProductsService {
       colores:colores
     }
 
-    return this.httpClient.post(this.API_URL_POST, infoProducto)
+    return this.httpClient.post(`${this.API_URL}registrarProducto`,infoProducto);
 
   }
 
@@ -49,13 +51,13 @@ export class ProductsService {
       colores:colores
     }
 
-    return this.httpClient.put(`${this.API_URL_PUT}/${id}`, infoProducto);
+    return this.httpClient.put(`${this.API_URL}actualizarProducto/${id}`, infoProducto);
   }
 
   //Eliminar datos
 
   deleteProduct(id:string){
-    return this.httpClient.delete(`${this.API_URL_DELETE}/${id}`);
+    return this.httpClient.delete(`${this.API_URL}eliminarProducto/${id}`);
   }
 
 }

@@ -8,7 +8,7 @@
           <th class="tr-title" scope="col">No.</th>
           <th class="tr-title" scope="col">Producto</th>
           <th class="tr-title" scope="col">Cantidad</th>
-          <th class="tr-title" scope="col">imagen</th>
+          <th class="tr-title" scope="col">Precio</th>
           <th class="tr-title" scope="col">Eliminar</th>
           <th class="tr-title" scope="col">Actualizar</th>
         </tr>
@@ -16,7 +16,7 @@
       <tbody>
         @for (productos of allProducts; track $index){
         <tr>
-          <th scope="row">1</th>
+          <th scope="row">{{ 1 + $index}}</th>
           <td>{{ productos.nombre }}</td>
           <td>{{ productos.cantidad }}</td>
           <td>{{ productos.precio }}</td>
@@ -62,8 +62,7 @@
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label neg-title"
-              >Nombre del Producto</label
-            >
+              >Nombre del Producto</label>
             <input
               type="text"
               class="form-control"
@@ -104,9 +103,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">
-              Precio</label
-            >
+            <label for="formGroupExampleInput2" class="form-label">Precio</label>
             <input
               type="number"
               class="form-control"
@@ -118,10 +115,7 @@
             <button
               class="btn btn-secondary"
               data-bs-target="#exampleModalToggle2"
-              data-bs-toggle="modal"
-            >
-              Guardar
-            </button>
+              data-bs-toggle="modal" (click)="agregarProduct()">Guardar</button>
           </div>
         </div>
       </div>
@@ -129,10 +123,7 @@
     <button
       class="btn btn-secondary"
       data-bs-target="#exampleModalToggle"
-      data-bs-toggle="modal"
-    >
-      Agregar Producto
-    </button>
+      data-bs-toggle="modal">Agregar Producto</button>
     <!-- termino modal agregar productos-->
   </section>
 </main>
