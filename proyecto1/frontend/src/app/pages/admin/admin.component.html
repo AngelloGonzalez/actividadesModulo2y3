@@ -6,7 +6,7 @@
       <thead>
         <tr>
           <th class="tr-title" scope="col">No.</th>
-          <th class="tr-title" scope="col">Producto</th>
+          <th class="tr-title" scope="col">Nombre</th>
           <th class="tr-title" scope="col">Cantidad</th>
           <th class="tr-title" scope="col">Precio</th>
           <th class="tr-title" scope="col">Eliminar</th>
@@ -51,7 +51,7 @@
         <div class="modal-content con-mod">
           <div class="modal-header">
             <h1 class="modal-title fs-5 neg-title" id="exampleModalToggleLabel">
-              Agregar producto
+              Datos del Producto
             </h1>
             <button
               type="button"
@@ -61,6 +61,21 @@
             ></button>
           </div>
           <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label neg-title"
+              >Ingrese imegen del producto</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              aria-label="file example"
+              placeholder="Ingrese Link de la Imagen"
+              required
+              name = "Imagen"
+              [(ngModel)]="product.imagen"
+            />
+            <div class="invalid-feedback">Campo obligatorio</div>
+          </div>
+          <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label neg-title"
               >Nombre del Producto</label>
             <input
@@ -68,47 +83,43 @@
               class="form-control"
               id="formGroupExampleInput"
               placeholder="Ingrese nombre del producto"
+              name = "nombre"
+              [(ngModel)]="product.nombre"
             />
           </div>
+
           <div class="form-floating">
             <textarea
               class="form-control neg-title"
               placeholder="Leave a comment here"
               id="floatingTextarea"
+              [(ngModel)]="product.descripcion"
             ></textarea>
-            <label for="floatingTextarea">Descripción del producto</label>
+            <label for="floatingTextarea"  >Descripción del producto</label>
           </div>
           <br />
           <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label neg-title"
-              >Ingrese imegen del producto</label
-            >
+            <label for="formGroupExampleInput2" class="form-label">Precio</label>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              aria-label="file example"
-              required
+              id="formGroupExampleInput2"
+              placeholder="Ingrese el precio"
+              name = "precio"
+              [(ngModel)]="product.precio"
             />
-            <div class="invalid-feedback">Campo obligatorio</div>
           </div>
           <div class="mb-3">
             <label for="formGroupExampleInput2 neg-title" class="form-label"
-              >Color</label
+              >Cantidad</label
             >
             <input
               type="text"
               class="form-control"
               id="formGroupExampleInput2"
-              placeholder="Ingrese el color"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Precio</label>
-            <input
-              type="number"
-              class="form-control"
-              id="formGroupExampleInput2"
-              placeholder="Ingrese el precio"
+              placeholder="Ingrese la cantidad"
+              name = "cantidad"
+              [(ngModel)]="product.cantidad"
             />
           </div>
           <div class="modal-footer">
@@ -116,6 +127,12 @@
               class="btn btn-secondary"
               data-bs-target="#exampleModalToggle2"
               data-bs-toggle="modal" (click)="agregarProduct()">Guardar</button>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal" name="actualizar" (click)="actualizarProducto(product._id)">Actualizar</button>
           </div>
         </div>
       </div>

@@ -27,13 +27,13 @@ export class ProductsService {
 
   //Crear datos
   // esta funcion me recibe parametros
-  postProduct(nombre:string, imagen:string, precio:number, cantidad:number, colores:string){
+  postProduct(imagen:string,nombre:string, descripcion:string, precio:string, cantidad:string ){
     const infoProducto = {
-      nombre:nombre,
       imagen:imagen,
+      nombre:nombre,
+      descripcion:descripcion,
       precio:precio,
-      cantidad:cantidad,
-      colores:colores
+      cantidad:cantidad
     }
 
     return this.httpClient.post(`${this.API_URL}registrarProducto`,infoProducto);
@@ -42,13 +42,13 @@ export class ProductsService {
 
   //Modificar datos
 
-  putProduct(nombre:string, imagen:string, precio:number, cantidad:number, colores:string, id:string){
+  putProduct(imagen:string,nombre:string, descripcion:string, precio:string, cantidad:string, id:string){
     const infoProducto = {
-      nombre:nombre,
       imagen:imagen,
+      nombre:nombre,
+      descripcion:descripcion,
       precio:precio,
-      cantidad:cantidad,
-      colores:colores
+      cantidad:cantidad
     }
 
     return this.httpClient.put(`${this.API_URL}actualizarProducto/${id}`, infoProducto);
