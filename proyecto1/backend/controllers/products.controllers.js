@@ -31,12 +31,12 @@ export const getProducts = async (req, res) => {
 //Petición POST -> me crea los productos uno por uno
 export const postProduct = async (req, res) => {
     //body -> contenido de mi petición -> los datos que tu le das para que se pueda crear el producto nuevo
-    const { nombre, imagen, precio, color, cantidad } = req.body;
+    const {  imagen, nombre, descripcion, precio, cantidad } = req.body;
     // const data  = req.body
     //validación de que se hayan ingresado todos los datos
-    // if (nombre || imagen || precio || color || cantidad) {
-    //     return res.status(400).json({ message: 'Debe ingresar todos los campos requeridos, nombre, imagen, precio y color' });
-    // }
+    if (imagen == '' ||  nombre== '' || descripcion == 0 || precio == '' || cantidad == '') {
+        return res.status(400).json({ message: 'Debe ingresar todos los campos requeridos, nombre, imagen, precio y color' });
+    }
 
     // console.log('ejemplo' + req.body);
     try {
@@ -48,7 +48,6 @@ export const postProduct = async (req, res) => {
         //500 -> error inesperado en el servidor
         return res.status(500).json({ message: error.message });
     }
-
 
 }
 
@@ -62,6 +61,8 @@ export const deleteProductById = async (req, res) => {
         if (productDeleted) {
             return res.status(404).json({ message: 'Lo siento! no se encontró producto para borrar' });
         }
+
+
 
         return res.status(200).json({ msg: 'Producto eliminado correctamente' });
     } catch (error) {

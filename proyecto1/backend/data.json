@@ -1,37 +1,44 @@
 [
     {
         "nombre": "Kia Picanto",
-        "imagen": "https://th.bing.com/th/id/OIP.NMocO7XsHiecGODzOmd18AAAAA?rs=1&pid=ImgDetMain",
+        "imagen": "https://s3.amazonaws.com/kia.com.co/Picanto_Adventurous_Green_A2_G_00006_bf14c5ac7a.png",
         "precio": "55000000",
         "cantidad":"15",
-        "colores": "rojo, negro, verde militar"
+        "descripcion": "El nuevo Kia Picanto está hecho pensando en aquellos que quieren recorrer la ciudad de manera práctica y con estilo."
     },
     {
         "nombre": "Kia Soluto",
-        "imagen": "https://th.bing.com/th/id/OIP.-vCQkJ4xAsAAw6ERm2MthwAAAA?rs=1&pid=ImgDetMain",
+        "imagen": "https://s3.amazonaws.com/kia.com.co/2_Soluto_3_2d9d3c2b75.png",
         "precio": "65000000",
         "cantidad":"9",
-        "colores": "rojo, blanco, negro, azul, plata"
+        "descripcion": "Tiene un estilo moderno de líneas acentuadas, muy característico de nuestros nuevos modelos. Kia Soluto está destinado a cumplir tus sueños."
     },
     {
         "nombre": "Kia Stonic",
         "imagen": "https://th.bing.com/th/id/OIP.z92zKq5vZ3jO8yJwqgqzuAAAAA?rs=1&pid=ImgDetMain",
         "precio": "95000000",
         "cantidad":"20",
-        "colores": "rojo, blanco, negro, azul, plata, gris, azul oscuro"
+        "descripcion": "El Kia Stonic ofrece un estilo único y versátil para aquellos que convierten cada viaje en una aventura. Su diseño aerodinámico refleja deportividad, poder y dinamismo."
     },
     {
         "nombre": "Kia Seltos",
         "imagen": "https://th.bing.com/th/id/OIP.3gilYkhmF7pLX6_ZICFHaQAAAA?rs=1&pid=ImgDetMain",
         "precio": "120000000",
         "cantidad":"18",
-        "colores": "naranja, gris, negro, plata, azul oscuro"
+        "descripcion": "La Kia Seltos ofrece un estilo auténtico en su diseño exterior. Su nueva firma lumínica “Star Map” compuesta por faros full led garantiza."
     },
     {
         "nombre": "Kia Sportage",
         "imagen": "https://th.bing.com/th/id/OIP.xY4nhZs20-NFa3nU3bj9oAHaFj?rs=1&pid=ImgDetMain",
         "precio": "210000000",
         "cantidad":"25",
-        "colores": "blanco, negro, verde militar, gris"
+        "descripcion": "El interior de la Kia Sportage fusiona comodidad y tecnología de manera excepcional. Con materiales de primera calidad y un diseño intuitivo."
+    },
+    {
+        "nombre": "Kia Carnival",
+        "imagen": "https://s3.amazonaws.com/kia.com.co/Carnival_Roja_31_3914e6621a.png",
+        "precio": "195000000",
+        "cantidad":"12",
+        "descripcion": "Amplio y cómodo espacio interior, adaptable a las necesidades de cada aventura en familia, con puestos modificables para 7 u 8 personas"
     }
 ]

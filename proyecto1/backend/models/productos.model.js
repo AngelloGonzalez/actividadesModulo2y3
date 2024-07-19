@@ -6,25 +6,26 @@ const schema = mongoose.Schema;
 //Estructrando cómo se van a guardar la información de los productos en nuestra db
 //Schema es la plantilla
 const productSchema = new schema({
+    imagen:{
+        type: String,
+        required:true
+    },
     nombre:{
         type: String,
-        require:true
+        required:true
     },
-    imagen:{
-        type: String
+     descripcion:{
+        type: String,
+        required:true
     },
     precio:{
-        type: Number,
-        require:true
+        type: String,
+        required:true
     },
     cantidad:{
-        type: Number,
-        require:true
-    },
-    colores:{
         type: String,
-        require:true
-    },
+        required:true
+    }
 });
 
 //Utilizamos esa plantilla para cear nuestro modelo -> creamos la coleccion donde se van a guardar los datos
