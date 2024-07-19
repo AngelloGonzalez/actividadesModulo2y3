@@ -1,0 +1,18 @@
+
+
+.mod-ini-ses{
+    position: absolute;
+    margin-left: 7%;
+    backdrop-filter: blur(2px);
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgba(52, 52, 52, 0.9), rgba(149, 182, 239, 0.9));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgba(48, 118, 146, 0.9), rgba(132, 157, 199, 0.9));
+  }
